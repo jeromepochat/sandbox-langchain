@@ -19,6 +19,7 @@ import dev.langchain4j.model.chat.ChatLanguageModel;
 import dev.langchain4j.model.embedding.EmbeddingModel;
 import dev.langchain4j.model.openai.OpenAiChatModel;
 import dev.langchain4j.model.openai.OpenAiEmbeddingModel;
+import dev.langchain4j.model.openai.OpenAiModelName;
 import dev.langchain4j.retriever.EmbeddingStoreRetriever;
 import dev.langchain4j.store.embedding.EmbeddingStore;
 import dev.langchain4j.store.embedding.EmbeddingStoreIngestor;
@@ -36,8 +37,8 @@ public class LangChain4J {
                 embeddingModel);
 
         final ChatLanguageModel chatLanguageModel = OpenAiChatModel.builder()
-                .modelName("gpt-4")
-                // .modelName("gpt-3.5-turbo-16k-0613")
+                .modelName(OpenAiModelName.GPT_4)
+                // .modelName(OpenAiModelName.GPT_3_5_TURBO_0613)
                 .apiKey(API_KEY)
                 .timeout(Duration.ofSeconds(60))
                 .maxRetries(5)
