@@ -38,7 +38,7 @@ public class LangChain4J {
 
         final ChatLanguageModel chatLanguageModel = OpenAiChatModel.builder()
                 .modelName(OpenAiModelName.GPT_4)
-                // .modelName(OpenAiModelName.GPT_3_5_TURBO_0613)
+                .modelName(OpenAiModelName.GPT_3_5_TURBO_0613)
                 .apiKey(API_KEY)
                 .timeout(Duration.ofSeconds(60))
                 .maxRetries(5)
